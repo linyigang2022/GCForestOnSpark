@@ -21,7 +21,7 @@ import org.apache.spark.annotation.Since
 import org.apache.spark.ml.UnaryTransformer
 import org.apache.spark.ml.linalg.{Vector, VectorUDT}
 import org.apache.spark.ml.param.{DoubleParam, ParamValidators}
-import org.apache.spark.ml.util._
+import org.apache.spark.ml.util.{Instrumentation1=>Instrumentation, _}
 import org.apache.spark.mllib.feature
 import org.apache.spark.mllib.linalg.{Vectors => OldVectors}
 import org.apache.spark.sql.types.DataType

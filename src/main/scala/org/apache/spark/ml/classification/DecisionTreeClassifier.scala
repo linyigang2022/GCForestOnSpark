@@ -27,7 +27,7 @@ import org.apache.spark.ml.param.ParamMap
 import org.apache.spark.ml.tree._
 import org.apache.spark.ml.tree.DecisionTreeModelReadWrite._
 import org.apache.spark.ml.tree.impl.{RandomForest, RandomForestImpl}
-import org.apache.spark.ml.util._
+import org.apache.spark.ml.util.{Instrumentation1=>Instrumentation, _}
 import org.apache.spark.mllib.tree.configuration.{Algo => OldAlgo, Strategy => OldStrategy}
 import org.apache.spark.mllib.tree.model.{DecisionTreeModel => OldDecisionTreeModel}
 import org.apache.spark.rdd.RDD

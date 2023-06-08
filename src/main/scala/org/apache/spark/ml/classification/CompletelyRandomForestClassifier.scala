@@ -6,7 +6,7 @@ package org.apache.spark.ml.classification
 
 import org.apache.spark.ml.feature.LabeledPoint
 import org.apache.spark.ml.tree.impl.CompletelyRandomForestImpl
-import org.apache.spark.ml.util._
+import org.apache.spark.ml.util.{Instrumentation1=>Instrumentation, _}
 import org.apache.spark.mllib.tree.configuration.{Algo => OldAlgo}
 import org.apache.spark.rdd.RDD
 import org.apache.spark.sql.Dataset

@@ -25,7 +25,7 @@ import org.apache.spark.annotation.{Experimental, Since}
 import org.apache.spark.ml.{Estimator, Model}
 import org.apache.spark.ml.param._
 import org.apache.spark.ml.param.shared.HasPredictionCol
-import org.apache.spark.ml.util._
+import org.apache.spark.ml.util.{Instrumentation1=>Instrumentation, _}
 import org.apache.spark.mllib.fpm.{AssociationRules => MLlibAssociationRules,
   FPGrowth => MLlibFPGrowth}
 import org.apache.spark.mllib.fpm.FPGrowth.FreqItemset

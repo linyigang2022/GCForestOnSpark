@@ -32,7 +32,7 @@ import org.apache.spark.ml.linalg._
 import org.apache.spark.ml.linalg.BLAS._
 import org.apache.spark.ml.param._
 import org.apache.spark.ml.param.shared._
-import org.apache.spark.ml.util._
+import org.apache.spark.ml.util.{Instrumentation1=>Instrumentation, _}
 import org.apache.spark.mllib.linalg.VectorImplicits._
 import org.apache.spark.mllib.stat.MultivariateOnlineSummarizer
 import org.apache.spark.rdd.RDD

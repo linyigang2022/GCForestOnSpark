@@ -39,10 +39,10 @@ import org.apache.spark.sql.Dataset
  * @param dataset the training dataset
  * @tparam E the type of the estimator
  */
-private[spark] class Instrumentation[E <: Estimator[_]] private (
+private[spark] class Instrumentation1[E <: Estimator[_]] private (
     estimator: E, dataset: RDD[_]) extends Logging {
 
-  private val id = Instrumentation.counter.incrementAndGet()
+  private val id = Instrumentation1.counter.incrementAndGet()
   private val prefix = {
     val className = estimator.getClass.getSimpleName
     s"$className-${estimator.uid}-${dataset.hashCode()}-$id: "
@@ -106,14 +106,14 @@ private[spark] class Instrumentation[E <: Estimator[_]] private (
 /**
  * Some common methods for logging information about a training session.
  */
-private[spark] object Instrumentation {
+private[spark] object Instrumentation1 {
   private val counter = new AtomicLong(0)
 
   /**
    * Creates an instrumentation object for a training session.
    */
   def create[E <: Estimator[_]](
-      estimator: E, dataset: Dataset[_]): Instrumentation[E] = {
+      estimator: E, dataset: Dataset[_]): Instrumentation1[E] = {
     create[E](estimator, dataset.rdd)
   }
 
@@ -121,8 +121,8 @@ private[spark] object Instrumentation {
    * Creates an instrumentation object for a training session.
    */
   def create[E <: Estimator[_]](
-      estimator: E, dataset: RDD[_]): Instrumentation[E] = {
-    new Instrumentation[E](estimator, dataset)
+      estimator: E, dataset: RDD[_]): Instrumentation1[E] = {
+    new Instrumentation1[E](estimator, dataset)
   }
 
 }

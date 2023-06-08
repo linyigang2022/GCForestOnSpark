@@ -15,7 +15,7 @@ import org.apache.spark.ml.core.JNAScala
 import org.apache.spark.ml.feature.LabeledPoint
 import org.apache.spark.ml.regression.DecisionTreeRegressionModel
 import org.apache.spark.ml.tree._
-import org.apache.spark.ml.util.Instrumentation
+import org.apache.spark.ml.util.{Instrumentation1=>Instrumentation}
 import org.apache.spark.ml.util.random.SamplingUtils
 import org.apache.spark.mllib.tree.configuration.{Algo => OldAlgo, Strategy => OldStrategy}
 import org.apache.spark.mllib.tree.impurity._

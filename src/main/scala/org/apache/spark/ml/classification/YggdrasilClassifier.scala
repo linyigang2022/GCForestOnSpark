@@ -7,7 +7,7 @@ import org.apache.spark.ml.feature.LabeledPoint
 import org.apache.spark.ml.param.ParamMap
 import org.apache.spark.ml.tree._
 import org.apache.spark.ml.tree.impl.YggdrasilImpl
-import org.apache.spark.ml.util.{DefaultParamsWritable, Identifiable, Instrumentation, MetadataUtils}
+import org.apache.spark.ml.util.{DefaultParamsWritable, Identifiable, Instrumentation1=>Instrumentation, MetadataUtils}
 import org.apache.spark.ml.linalg.Vector
 import org.apache.spark.mllib.tree.configuration.Strategy
 import org.apache.spark.mllib.tree.configuration.{Algo => OldAlgo}

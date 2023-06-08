@@ -23,7 +23,7 @@ import org.apache.spark.ml._
 import org.apache.spark.ml.attribute.NominalAttribute
 import org.apache.spark.ml.param._
 import org.apache.spark.ml.param.shared.{HasInputCol, HasOutputCol}
-import org.apache.spark.ml.util._
+import org.apache.spark.ml.util.{Instrumentation1=>Instrumentation, _}
 import org.apache.spark.sql.Dataset
 import org.apache.spark.sql.types.StructType
 

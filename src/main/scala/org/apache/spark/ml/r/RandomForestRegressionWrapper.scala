@@ -27,7 +27,7 @@ import org.apache.spark.ml.attribute.AttributeGroup
 import org.apache.spark.ml.feature.RFormula
 import org.apache.spark.ml.linalg.Vector
 import org.apache.spark.ml.regression.{RandomForestRegressionModel, RandomForestRegressor}
-import org.apache.spark.ml.util._
+import org.apache.spark.ml.util.{Instrumentation1=>Instrumentation, _}
 import org.apache.spark.sql.{DataFrame, Dataset}
 
 private[r] class RandomForestRegressorWrapper private (

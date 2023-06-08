@@ -28,7 +28,7 @@ import org.apache.spark.ml.linalg._
 import org.apache.spark.ml.param._
 import org.apache.spark.ml.param.shared._
 import org.apache.spark.ml.stat.distribution.MultivariateGaussian
-import org.apache.spark.ml.util._
+import org.apache.spark.ml.util.{Instrumentation1=>Instrumentation, _}
 import org.apache.spark.mllib.linalg.{Matrices => OldMatrices, Matrix => OldMatrix,
   Vector => OldVector, Vectors => OldVectors}
 import org.apache.spark.rdd.RDD

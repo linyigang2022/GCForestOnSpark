@@ -38,6 +38,7 @@ class UCI_adult extends BaseDatasets {
       else if (phase == "test") "linyigang/data/uci_adult/adult.test"
       else phase
 
+    println(data_path)
     val raw = spark.read.text(data_path)
 
 //    val features_path = if (featuresPath == "") "data/uci_adult/features" else featuresPath
@@ -46,7 +47,7 @@ class UCI_adult extends BaseDatasets {
     val fts_file = spark.read.text(features_path)
     val f_parsers = fts_file.rdd.filter(row => row.length > 0).map { row =>
       val line = row.getAs[String]("value")
-      println(s"line:$line")
+//      println(s"line:$line")
       new FeatureParser(line)
     }
 
@@ -70,7 +71,7 @@ class UCI_adult extends BaseDatasets {
 //      ++ Array.tabulate[Double](16) { _ =>
 //        Random.nextDouble()
 //      }
-      println(s"before require, data:${data.mkString("_")}")
+//      println(s"before require, data:${data.mkString("_")}")
       require(data.length == total_dims,
         "Total dims %d not equal to data.length %d".format(total_dims, data.length))
       Row.fromSeq(Seq[Any](label, data, idx))

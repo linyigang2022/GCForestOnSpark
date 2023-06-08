@@ -26,7 +26,7 @@ import org.apache.spark.ml.{Pipeline, PipelineModel}
 import org.apache.spark.ml.classification.{LinearSVC, LinearSVCModel}
 import org.apache.spark.ml.feature.{IndexToString, RFormula}
 import org.apache.spark.ml.r.RWrapperUtils._
-import org.apache.spark.ml.util._
+import org.apache.spark.ml.util.{Instrumentation1=>Instrumentation, _}
 import org.apache.spark.sql.{DataFrame, Dataset}
 
 private[r] class LinearSVCWrapper private (

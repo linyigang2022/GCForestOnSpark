@@ -14,7 +14,7 @@ import org.apache.spark.ml.param._
 import org.apache.spark.ml.tree.GCForestParams
 import org.apache.spark.ml.tree.configuration.GCForestStrategy
 import org.apache.spark.ml.tree.impl.GCForestImpl
-import org.apache.spark.ml.util._
+import org.apache.spark.ml.util.{Instrumentation1=>Instrumentation, _}
 import org.apache.spark.sql.{DataFrame, Dataset}
 import org.apache.spark.sql.functions._
 import org.apache.spark.sql.types.DoubleType

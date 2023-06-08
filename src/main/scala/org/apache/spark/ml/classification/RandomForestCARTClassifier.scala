@@ -13,7 +13,7 @@ import org.apache.spark.ml.linalg.{DenseVector, SparseVector, Vector, Vectors}
 import org.apache.spark.ml.param.ParamMap
 import org.apache.spark.ml.tree._
 import org.apache.spark.ml.tree.impl.RandomForestImpl
-import org.apache.spark.ml.util._
+import org.apache.spark.ml.util.{Instrumentation1=>Instrumentation, _}
 import org.apache.spark.ml.util.DefaultParamsReader.Metadata
 import org.apache.spark.mllib.tree.configuration.{Algo => OldAlgo}
 import org.apache.spark.mllib.tree.model.{RandomForestModel => OldRandomForestModel}
@@ -134,8 +134,10 @@ object RandomForestCARTClassifier extends DefaultParamsReadable[RandomForestCART
 
   /** Accessor for supported featureSubsetStrategy settings: auto, all, onethird, sqrt, log2 */
   @Since("1.4.0")
+//  final val supportedFeatureSubsetStrategies: Array[String] =
+//  RandomForestParams.supportedFeatureSubsetStrategies
   final val supportedFeatureSubsetStrategies: Array[String] =
-  RandomForestParams.supportedFeatureSubsetStrategies
+    TreeEnsembleParams.supportedFeatureSubsetStrategies
 
   @Since("2.0.0")
   override def load(path: String): RandomForestCARTClassifier = super.load(path)

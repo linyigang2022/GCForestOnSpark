@@ -27,7 +27,7 @@ import org.apache.spark.ml.classification.{GBTClassificationModel, GBTClassifier
 import org.apache.spark.ml.feature.{IndexToString, RFormula}
 import org.apache.spark.ml.linalg.Vector
 import org.apache.spark.ml.r.RWrapperUtils._
-import org.apache.spark.ml.util._
+import org.apache.spark.ml.util.{Instrumentation1=>Instrumentation, _}
 import org.apache.spark.sql.{DataFrame, Dataset}
 
 private[r] class GBTClassifierWrapper private (
