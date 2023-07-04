@@ -232,7 +232,7 @@ class MultilayerPerceptronClassifier @Since("1.5.0") (
    * @return Fitted model
    */
   override protected def train(dataset: Dataset[_]): MultilayerPerceptronClassificationModel = {
-    val instr = Instrumentation.create(this, dataset)
+    val instr = Instrumentation1.create(this, dataset)
     instr.logParams(labelCol, featuresCol, predictionCol, layers, maxIter, tol,
       blockSize, solver, stepSize, seed)
 

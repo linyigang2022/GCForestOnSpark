@@ -255,7 +255,7 @@ class BisectingKMeans @Since("2.0.0") (
       case Row(point: Vector) => OldVectors.fromML(point)
     }
 
-    val instr = Instrumentation.create(this, rdd)
+    val instr = Instrumentation1.create(this, rdd)
     instr.logParams(featuresCol, predictionCol, k, maxIter, seed, minDivisibleClusterSize)
 
     val bkm = new MLlibBisectingKMeans()

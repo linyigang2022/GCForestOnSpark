@@ -328,7 +328,7 @@ class GeneralizedLinearRegression @Since("2.0.0") (@Since("2.0.0") override val 
     val familyAndLink = FamilyAndLink(this)
 
     val numFeatures = dataset.select(col($(featuresCol))).first().getAs[Vector](0).size
-    val instr = Instrumentation.create(this, dataset)
+    val instr = Instrumentation1.create(this, dataset)
     instr.logParams(labelCol, featuresCol, weightCol, predictionCol, linkPredictionCol,
       family, solver, fitIntercept, link, maxIter, regParam, tol)
     instr.logNumFeatures(numFeatures)

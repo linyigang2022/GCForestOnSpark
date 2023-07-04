@@ -168,7 +168,7 @@ class IsotonicRegression @Since("1.5.0") (@Since("1.5.0") override val uid: Stri
     val handlePersistence = dataset.rdd.getStorageLevel == StorageLevel.NONE
     if (handlePersistence) instances.persist(StorageLevel.MEMORY_AND_DISK)
 
-    val instr = Instrumentation.create(this, dataset)
+    val instr = Instrumentation1.create(this, dataset)
     instr.logParams(labelCol, featuresCol, weightCol, predictionCol, featureIndex, isotonic)
     instr.logNumFeatures(1)
 

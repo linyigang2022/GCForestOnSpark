@@ -102,7 +102,7 @@ class CrossValidator @Since("1.2.0") (@Since("1.4.0") override val uid: String)
     val numModels = epm.length
     val metrics = new Array[Double](epm.length)
 
-    val instr = Instrumentation.create(this, dataset)
+    val instr = Instrumentation1.create(this, dataset)
     instr.logParams(numFolds, seed)
     logTuningParams(instr)
 

@@ -147,7 +147,7 @@ class NaiveBayes @Since("1.5.0") (
       }
     }
 
-    val instr = Instrumentation.create(this, dataset)
+    val instr = Instrumentation1.create(this, dataset)
     instr.logParams(labelCol, featuresCol, weightCol, predictionCol, rawPredictionCol,
       probabilityCol, modelType, smoothing, thresholds)
 

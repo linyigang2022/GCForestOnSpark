@@ -301,7 +301,7 @@ final class OneVsRest @Since("1.4.0") (
   override def fit(dataset: Dataset[_]): OneVsRestModel = {
     transformSchema(dataset.schema)
 
-    val instr = Instrumentation.create(this, dataset)
+    val instr = Instrumentation1.create(this, dataset)
     instr.logParams(labelCol, featuresCol, predictionCol)
     instr.logNamedValue("classifier", $(classifier).getClass.getCanonicalName)
 

@@ -499,7 +499,7 @@ class LogisticRegression @Since("1.2.0") (
 
     if (handlePersistence) instances.persist(StorageLevel.MEMORY_AND_DISK)
 
-    val instr = Instrumentation.create(this, instances)
+    val instr = Instrumentation1.create(this, instances)
     instr.logParams(regParam, elasticNetParam, standardization, threshold,
       maxIter, tol, fitIntercept)
 

@@ -227,7 +227,7 @@ class AFTSurvivalRegression @Since("1.6.0") (@Since("1.6.0") override val uid: S
     val featuresStd = featuresSummarizer.variance.toArray.map(math.sqrt)
     val numFeatures = featuresStd.size
 
-    val instr = Instrumentation.create(this, dataset)
+    val instr = Instrumentation1.create(this, dataset)
     instr.logParams(labelCol, featuresCol, censorCol, predictionCol, quantilesCol,
       fitIntercept, maxIter, tol, aggregationDepth)
     instr.logNamedValue("quantileProbabilities.size", $(quantileProbabilities).length)
